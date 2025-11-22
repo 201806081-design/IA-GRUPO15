@@ -1,4 +1,3 @@
-# main.py
 import argparse
 import sys
 import os
@@ -22,30 +21,30 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚗 SISTEMA DE CONDUCCIÓN AUTÓNOMA")
-    print("📚 Universidad Mayor de San Simón")
-    print("🏫 Facultad de Ciencias y Tecnología")
-    print("👥 Integrantes:")
+    print(" SISTEMA DE CONDUCCIÓN AUTÓNOMA")
+    print(" Universidad Mayor de San Simón")
+    print(" Facultad de Ciencias y Tecnología")
+    print(" Integrantes:")
     print("   - Barrios Muni Jhessica")
     print("   - Bejarano Soria Nicolas Santiago") 
     print("   - Padilla Luizaga Carlos Randal")
-    print("📖 Materia: Inteligencia Artificial I")
-    print("🔬 Área: Aprendizaje por Refuerzo")
-    print("👁️  Subárea: Visión por Computadora")
+    print(" Materia: Inteligencia Artificial ")
+    print(" Área: Aprendizaje por Refuerzo")
+    print("  Subárea: Visión por Computadora")
     print("="*50)
     
     if args.mode == 'train':
-        print("🎯 MODO: ENTRENAMIENTO")
+        print(" MODO: ENTRENAMIENTO")
         trainer = AutonomousDrivingTrainer()
         trainer.train(num_episodes=args.episodes)
         
     elif args.mode == 'test':
-        print("🧪 MODO: PRUEBA")
+        print(" MODO: PRUEBA")
         tester = AutonomousDrivingTester(args.model)
         tester.test(num_episodes=5, render=True)
         
     elif args.mode == 'demo':
-        print("🎮 MODO: DEMOSTRACIÓN")
+        print(" MODO: DEMOSTRACIÓN")
         tester = AutonomousDrivingTester(args.model)
         tester.test(num_episodes=3, render=True)
 
